@@ -16,3 +16,6 @@ Next, I looked at the outcomes for plays based on their goal. I was able to extr
 The count of theater outcomes that were successful steadily increased from March through May. After May, we saw a steady decrease in the number of successful outcomes through September. 
 ### Outcomes Based on Goal Results
 There was a high percentage of successful projects that had a monetary goal less than $1000. However, most of the projects (534 projects) fell between the goal of $1000 to $4999 and had a high success rate as well. Therefore, it is safe to assume that there is a higher success rate for projects that have a lower goal amount. 
+### Dataset Limitations/Recommendations 
+This dataset only covers **plays** that ended between 2010 and 2017. The parent category of Theater also contains Musicals and Spaces that were not accounted for in the "Outcomes Based on Goal" analysis. If you would like to include these subcategories in your analysis you would change the code to =COUNTIFS(Kickstarter!$D:$D, ***"Value"*** ,Kickstarter!$D:$D, ***"Value"*** ,Kickstarter!$F:$F, ***"success condition"*** ,Kickstarter!$Q:$Q,"theater"). 
+For example the final code for one of the cells would be =Countifs(Kickstarter!$D:$D,">=1000",Kickstarter!$D:$D,"<=4999",Kickstarter!$F:$F,"successful",Kickstarter!$Q:$Q:,"theater"). 
